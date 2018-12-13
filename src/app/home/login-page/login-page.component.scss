@@ -10,22 +10,24 @@
 }
 .login-wrapper {
   display: flex;
-  padding-top: 171px;
+  padding-top: 18vh;
   .login-box {
     display: flex;
-    width: 20%;
+    align-items: center;
+    position: relative;
+    width: var( --uni-global-col-width);
+    height: var( --uni-global-col-width);
     padding: 45px;
     background: rgba(0, 0, 0, 0.3);
     .login-form {
       display: flex;
       flex-direction: column;
-      position: relative;
       width: 100%;
 
       button.btn-submit {
+        font-family: 'Helvetica Black';
         position: absolute;
-        bottom: -100px;
-        margin-top: 100px;
+        top: calc(var(--uni-global-col-width) + 3.125rem);
         font-size: 18px;
         text-align: center;
         color: #FFFFFF;
@@ -34,6 +36,23 @@
     }
   }
   .login-cover {
-    width: 576px;
+    position: relative;
+    width: calc(var( --uni-global-col-width) * 2);
+    .cover-image {
+      height: 100%;
+      img {
+        object-fit: cover;
+      }
+    }
+    .cover-text {
+      font-size: 50px;
+      color: #FFFFFF;
+      width: var( --uni-global-col-width);
+      position: absolute;
+      bottom: -64px;
+      left: 15px;
+      line-height: 50px;
+      font-family: 'Helvetica Black';
+    }
   }
 }

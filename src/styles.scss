@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets//themes//custom-theme.scss";
+@import '~swiper/dist/css/swiper.min.css';
 
 * {
   box-sizing: border-box;
+  outline: 0;
 }
 a, p, h1, h2, h3, h4, h5, button {
   margin: 0;
@@ -30,6 +32,8 @@ html, body {
   width: 100%;
   height: 100%;
   font-size: 100%;
+  --uni-global-col-width: 20vw;
+  --uni-global-padding: 6.25rem;
 }
 
 img {

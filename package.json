@@ -28,6 +28,7 @@
     "@ngrx/store-devtools": "^6.1.2",
     "core-js": "^2.5.4",
     "daemonite-material": "^4.1.1",
+    "ngx-swiper-wrapper": "^7.1.1",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },

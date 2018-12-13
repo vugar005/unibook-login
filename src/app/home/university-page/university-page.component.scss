@@ -1,0 +1,46 @@
+:host {
+  display: block;
+}
+.module-info {
+  color: #ffffff;
+  .ng-title {
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 75%;
+    padding: 30px 0;
+    font-family: 'Helvetica Black';
+  }
+  .ng-content {
+    display: flex;
+    .ng-content-left {
+      width: 100%;
+      .swiper-container {
+        width: 50%;
+        margin: 0;
+        margin-right: auto;
+      }
+      .swiper-slide {
+      }
+      .content-info {
+        width: calc(var(--uni-global-col-width) * 3);
+        line-height: 25px;
+        font-size: 18px;
+        color: #ffffff;
+        padding-top: 9vh;
+      }
+    }
+    .ng-content-right {
+    }
+  }
+}
+
+/deep/ .custom-bullet {
+  width: 25px;
+  background: #ffffff;
+  height: 1px;
+}
+.swiper-pagination-bullet {
+  width: 5px;
+  color: #ffffff;
+  height: 2px;
+}

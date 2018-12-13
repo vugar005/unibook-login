@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.module-info {
+  color: #ffffff;
+  width: 50%;
+  .ng-title {
+    font-size: 50px;
+    padding-top: 200px;
+    font-family: 'Helvetica Black';
+  }
+  .ng-content {
+    line-height: 25px;
+    font-size: 18px;
+    padding-top: 30px;
+  }
+}
+.module-cover {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  img {
+    height: auto;
+  }
+}
