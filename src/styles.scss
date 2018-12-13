@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets//themes//custom-theme.scss";
+
+* {
+  box-sizing: border-box;
+}
+a, p, h1, h2, h3, h4, h5, button {
+  margin: 0;
+  font-family: 'Helvetica Regular';
+
+}
+button {
+  height: auto;
+  border: 0;
+  outline: 0;
+  padding: 0 16px;
+  background: transparent;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  // object-fit: cover;
+}
+@font-face {
+  font-family: 'Helvetica Regular';
+  src: url('./assets/fonts/HelveticaNeue/HelveticaNeue-Regular.otf');
+}
+@font-face {
+  font-family: 'Helvetica Black';
+  src: url('./assets/fonts/HelveticaNeue/HelveticaNeue-Black.otf');
+}
