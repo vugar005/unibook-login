@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "unibook-login"
+  "defaultProject": "unibook-login",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
