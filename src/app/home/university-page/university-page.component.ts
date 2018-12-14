@@ -10,8 +10,11 @@ export class UniversityPageComponent implements OnInit {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-
-  }
+  },
+  speed: 2500,
+  autoplay: {
+    delay: 2000,
+  },
 };
   constructor() { }
 

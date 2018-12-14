@@ -1,9 +1,9 @@
 <div class="module-info">
-  <div class="ng-title">
+  <div class="co-title">
     Azərbaycan Dövlət Aqrar Universiteti
     </div>
-  <div class="ng-content">
-    <div class="ng-content-left">
+  <div class="co-content">
+    <div class="co-content-left">
         <div class="content-swiper">
           <div  class="swiper-container" [swiper]="config" >
             <div class="swiper-wrapper">
@@ -21,7 +21,6 @@
               </div>
             </div>
 
-            <div class="swiper-scrollbar"></div>
             <div class="swiper-pagination"></div>
 
           </div>
@@ -32,8 +31,21 @@
            təsərrüfatını daha da inkişaf etdirmək sahəsində elmi tədqiqatların mühüm mərkəzi olmalıdır
         </div>
     </div>
-    <div class="ng-content-right">
-      <div class="content-count"></div>
+    <div class="co-content-right">
+      <div class="count-box">
+          <div class="item-count" countUp [endVal]="'32'" [duration]="3"></div>
+          <div class="item-name">Fakültə</div>
+      </div>
+      <div class="count-box">
+          <div class="item-count" countUp [endVal]="'2,115'" [duration]="3"></div>
+          <div class="item-name">Müəllim</div>
+      </div>
+      <div class="count-box">
+          <div class="item-count" countUp [endVal]="'220,756'" [duration]="3"></div>
+          <div class="item-name">Tələbə</div>
+      </div>
+
     </div>
   </div>
+  <uni-footer></uni-footer>
 </div>

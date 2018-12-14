@@ -27,7 +27,9 @@
     "@ngrx/store": "^6.1.2",
     "@ngrx/store-devtools": "^6.1.2",
     "core-js": "^2.5.4",
+    "countup.js-angular2": "^6.0.2",
     "daemonite-material": "^4.1.1",
+    "ng-animate": "^0.3.4",
     "ngx-swiper-wrapper": "^7.1.1",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"

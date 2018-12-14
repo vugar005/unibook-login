@@ -28,12 +28,17 @@ button {
     outline: 0;
   }
 }
+:root {
+  --uni-global-col-width: 20vw;
+  --uni-global-top-padding: 6rem;
+  --uni-global-side-padding: 6rem;
+  --uni-global-nav-transform: 10vw;
+}
 html, body {
   width: 100%;
   height: 100%;
   font-size: 100%;
-  --uni-global-col-width: 20vw;
-  --uni-global-padding: 6.25rem;
+
 }
 
 img {
@@ -48,4 +53,21 @@ img {
 @font-face {
   font-family: 'Helvetica Black';
   src: url('./assets/fonts/HelveticaNeue/HelveticaNeue-Black.otf');
+}
+
+@media all and (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+  :root {
+    --uni-global-top-padding: 3rem;
+    --uni-global-side-padding: 3rem;
+  }
+}
+
+
+@media all and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
 }

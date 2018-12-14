@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  position: fixed;
+  bottom: var(--uni-global-top-padding);
+  right: var(--uni-global-side-padding);
+}
+.co-wrapper {
+  display: flex;
+  .nav-link {
+    line-height: 14px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-right: 15px;
+    font-family: 'Helvetica Black';
+  }
+}

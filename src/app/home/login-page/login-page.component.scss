@@ -17,7 +17,7 @@
     position: relative;
     width: var( --uni-global-col-width);
     height: var( --uni-global-col-width);
-    padding: 45px;
+    padding: 2.8125rem;
     background: rgba(0, 0, 0, 0.3);
     .login-form {
       display: flex;
@@ -28,7 +28,7 @@
         font-family: 'Helvetica Black';
         position: absolute;
         top: calc(var(--uni-global-col-width) + 3.125rem);
-        font-size: 18px;
+        font-size: 1.125rem;
         text-align: center;
         color: #FFFFFF;
         align-self: center;
@@ -53,6 +53,39 @@
       left: 15px;
       line-height: 50px;
       font-family: 'Helvetica Black';
+    }
+  }
+}
+
+
+
+@media all and (max-width: 992px) {
+  .login-wrapper {
+    justify-content: center;
+    padding-top: 7vh;
+
+    .login-box {
+      width: 300px;
+      height: 300px;
+      .login-form {
+        button.btn-submit {
+          top: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .login-wrapper {
+    .login-box {
+      width: 250px;
+      height: 250px;
+      .login-form {
+        button.btn-submit {
+          top: 300px;
+        }
+      }
     }
   }
 }

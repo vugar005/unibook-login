@@ -1,21 +1,24 @@
 :host {
   display: block;
+  position: relative;
 }
 .module-info {
+  display: flex;
+  flex-direction: column;
   color: #ffffff;
-  .ng-title {
+  .co-title {
     font-size: 3rem;
     line-height: 3rem;
     width: 75%;
-    padding: 30px 0;
+    padding: 3rem 0;
     font-family: 'Helvetica Black';
   }
-  .ng-content {
+  .co-content {
     display: flex;
-    .ng-content-left {
+    .co-content-left {
       width: 100%;
       .swiper-container {
-        width: 50%;
+        width: calc(var( --uni-global-col-width) * 2);
         margin: 0;
         margin-right: auto;
       }
@@ -23,24 +26,57 @@
       }
       .content-info {
         width: calc(var(--uni-global-col-width) * 3);
-        line-height: 25px;
-        font-size: 18px;
+        line-height: 1.5625rem;
+        font-size: 1.125rem;
         color: #ffffff;
         padding-top: 9vh;
       }
     }
-    .ng-content-right {
+    .co-content-right {
+      display: flex;
+      flex-direction: column;
+      width: var(--uni-global-col-width);
+      .count-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 1.5625rem;
+        .item-count {
+          font-size: 2rem;
+          color: #FFFFFF;
+          font-weight: bold;
+          font-family: 'Helvetica Black';
+          line-height: 2.25rem;
+        }
+        .item-name {
+          font-weight: 300;
+          line-height: normal;
+          font-size: 1.25rem;
+          color: #FFFFFF;
+        }
+      }
     }
   }
 }
 
-/deep/ .custom-bullet {
-  width: 25px;
-  background: #ffffff;
+
+/deep/.swiper-pagination-bullet {
+  width: 1.5625rem;
+  background-color: #ffffff;
   height: 1px;
 }
-.swiper-pagination-bullet {
-  width: 5px;
-  color: #ffffff;
-  height: 2px;
+
+@media all and (max-width: 992px) {
+   .module-info {
+     padding: 0 var(--uni-global-side-padding);
+     .co-content {
+       flex-direction: column;
+       .co-content-left {
+         .content-info {
+           width: 100%;
+           padding-top: 4vh;
+         }
+       }
+     }
+   }
 }

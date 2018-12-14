@@ -5,19 +5,20 @@
 }
 .module-info {
   color: #ffffff;
-  width: 50%;
+  width: calc(var( --uni-global-col-width) * 2);
   .ng-title {
-    font-size: 50px;
-    padding-top: 200px;
+    font-size: 3.125rem;
+    padding-top: 17vh;
     font-family: 'Helvetica Black';
   }
   .ng-content {
-    line-height: 25px;
-    font-size: 18px;
-    padding-top: 30px;
+    line-height: 1.5625rem;
+    font-size: 1.125rem;
+    padding-top: 1.875rem;
   }
 }
 .module-cover {
+  top: 4vh;
   width: 50%;
   position: absolute;
   right: 0;

@@ -1,18 +1,18 @@
-<div class="app-icon">
-  <img src="./assets/icons/unibook.svg">
-</div>
 
-<div class="nav-current-number">01</div>
+<div class="nav-current-number ">{{ currentIndex }}</div>
 
 <div class="nav-line-navigation">
-  <div class="nav-line-box"
-  >
+  <div class="nav-line-box" *ngIf="currentIndex !=='01'">
     <div class="nav-line"></div>
-    <div class="nav-line-number">02</div>
-</div>
-  <div class="nav-line-box"
-  >
+    <div class="nav-line-number" [routerLink]="['/login']">01</div>
+  </div>
+  <div class="nav-line-box" *ngIf="currentIndex !=='02'">
     <div class="nav-line"></div>
-    <div class="nav-line-number">03</div>
+    <div class="nav-line-number" [routerLink]="['/university']">02</div>
+  </div>
+  <div class="nav-line-box" *ngIf="currentIndex !=='03'">
+    <div class="nav-line"></div>
+    <div class="nav-line-number" [routerLink]="['/unibook']">03</div>
+  </div>
 </div>
-</div>
+
