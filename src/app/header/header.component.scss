@@ -48,7 +48,7 @@
       .nav-tab-backdrop {
          visibility: visible;
          animation-duration: 1s;
-       //  animation-name: slideIn;
+          animation-name: slideIn;
          opacity: 0.5;
 
       }
@@ -57,7 +57,7 @@
 }
 @keyframes slideIn {
   from {
-    transform: translateX(-25vh);
+    transform: translateX(var(--uni-global-nav-transform));
   // transform: translateX('20vw');
     visibility: visible;
   }

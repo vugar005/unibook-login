@@ -23,23 +23,20 @@ export class HeaderComponent implements OnInit {
  ngOnInit() {
    this.router.events
    .pipe(
-  //   tap( res => console.log(res)),
     filter((event) => event instanceof NavigationEnd)
    ).subscribe(res =>  {
       const routeData = this.route.root.firstChild.snapshot.firstChild.data;
      if (routeData) {
        this.previousIndex = this.currentIndex;
        this.currentIndex = routeData.index;
-       const temp: any = (+this.previousIndex) - (+this.currentIndex) ;
-       console.log(temp);
-   //    const transformValue =
+       const indexDiff = (+this.previousIndex) - (+this.currentIndex) ;
+       console.log(indexDiff);
        const root = document.documentElement;
        const style = getComputedStyle(document.body);
-
-       // calc(var(--uni-global-col-width) * ${temp}))
-    //   root.style.setProperty('--uni-global-nav-transform', '20' + 'vw');
-     //  root.style.setProperty('--uni-global-nav-transform', `calc(25vh * ${temp})`);
-        console.log(typeof style.getPropertyValue('--uni-global-nav-transform'));
+       const result = 25 * indexDiff;
+     //  const result = 25 * indexDiff;
+       console.log(Math.abs(parseInt(style.getPropertyValue('--uni-global-nav-transform'), 10)) * indexDiff) ;
+      root.style.setProperty('--uni-global-nav-transform', result + 'vw');
      }
    });
  }
