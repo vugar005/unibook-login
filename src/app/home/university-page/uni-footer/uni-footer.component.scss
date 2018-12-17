@@ -1,17 +1,31 @@
 :host {
   display: block;
-  position: fixed;
-  bottom: var(--uni-global-top-padding);
-  right: var(--uni-global-side-padding);
+  position: relative;
+  padding: var(--uni-global-top-padding) var(--uni-global-side-padding);
+  align-self: flex-end;
+  margin-top: auto;
 }
 .co-wrapper {
   display: flex;
-  .nav-link {
+  .ng-nav-link{
     line-height: 14px;
     font-size: 18px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding-right: 15px;
+    padding: .5rem 1rem;
+    padding-left: 0;
     font-family: 'Helvetica Black';
   }
 }
+
+@media all and (max-width: 992px) {
+:host {
+  align-self: flex-start;
+  padding: var(--uni-global-top-padding) 0;
+}
+}
+@media all and (max-width: 768px) {
+  .co-wrapper{
+   flex-direction: column;
+  }
+  }

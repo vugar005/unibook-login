@@ -5,11 +5,13 @@
 }
 .module-info {
   color: #ffffff;
+  padding-right: 3.125rem;
   width: calc(var( --uni-global-col-width) * 2);
   .ng-title {
     font-size: 3.125rem;
     padding-top: 17vh;
     font-family: 'Helvetica Black';
+    line-height: 3.125rem;
   }
   .ng-content {
     line-height: 1.5625rem;
@@ -24,5 +26,20 @@
   right: 0;
   img {
     height: auto;
+  }
+}
+
+@media all and (max-width: 992px) {
+  :host {
+    flex-direction: column;
+  }
+  .module-cover {
+    position: static;
+  }
+  .module-info {
+    order: 1;
+    .ng-title {
+      padding-top: 0;
+    }
   }
 }

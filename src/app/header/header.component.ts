@@ -29,13 +29,11 @@ export class HeaderComponent implements OnInit {
      if (routeData) {
        this.previousIndex = this.currentIndex;
        this.currentIndex = routeData.index;
-       const indexDiff = (+this.previousIndex) - (+this.currentIndex) ;
+       const indexDiff = (+this.previousIndex) - (+this.currentIndex);
        console.log(indexDiff);
        const root = document.documentElement;
        const style = getComputedStyle(document.body);
-       const result = 25 * indexDiff;
-     //  const result = 25 * indexDiff;
-       console.log(Math.abs(parseInt(style.getPropertyValue('--uni-global-nav-transform'), 10)) * indexDiff) ;
+       const result = parseInt(style.getPropertyValue('--uni-global-col-width'), 10) * indexDiff;
       root.style.setProperty('--uni-global-nav-transform', result + 'vw');
      }
    });

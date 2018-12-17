@@ -3,14 +3,7 @@
   width: 100%;
   position: relative;
 }
-.app-icon {
-  position: fixed;
-  left: 0;
-  top: 0;
-  margin-left: var( --uni-global-side-padding);
-  margin-top: var(--uni-global-top-padding);
-  width: 6.875rem;
-}
+
 .co-wrapper {
   display: flex;
   width: 100%;
@@ -18,10 +11,10 @@
     width: var( --uni-global-col-width);
     position: relative;
     .nav-tab-backdrop {
-      width: 100%;
+      width: var( --uni-global-col-width);
       height: 100vh;
-      position: absolute;
-      top: calc(var(--uni-global-top-padding) * -1);
+      position: fixed;
+      top:0;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.18) 100%);
       transition: opacity 300ms ease-in-out;
       pointer-events: none;
@@ -49,6 +42,7 @@
          visibility: visible;
          animation-duration: 1s;
           animation-name: slideIn;
+          animation-timing-function: ease;
          opacity: 0.5;
 
       }
@@ -57,8 +51,8 @@
 }
 @keyframes slideIn {
   from {
+    // calculated in header.component.ts
     transform: translateX(var(--uni-global-nav-transform));
-  // transform: translateX('20vw');
     visibility: visible;
   }
 

@@ -1,11 +1,14 @@
 :host {
   display: block;
   position: relative;
+  flex: 1;
 }
 .module-info {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: #ffffff;
+  height: 100%;
   .co-title {
     font-size: 3rem;
     line-height: 3rem;
@@ -21,8 +24,6 @@
         width: calc(var( --uni-global-col-width) * 2);
         margin: 0;
         margin-right: auto;
-      }
-      .swiper-slide {
       }
       .content-info {
         width: calc(var(--uni-global-col-width) * 3);
@@ -76,6 +77,17 @@
            width: 100%;
            padding-top: 4vh;
          }
+         .content-swiper {
+          display: flex;
+          justify-content: center;
+          .swiper-container {
+           margin: auto;
+          }
+         }
+       }
+       .co-content-right {
+         padding-bottom: 0;
+         padding-top: 1.5625rem;
        }
      }
    }
